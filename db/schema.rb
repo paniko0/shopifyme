@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160521121505) do
+ActiveRecord::Schema.define(version: 20160521154209) do
+
+  create_table "items", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "wishlist_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "shopify_users", force: :cascade do |t|
     t.string   "uid"
@@ -32,6 +39,12 @@ ActiveRecord::Schema.define(version: 20160521121505) do
     t.string   "password_hash"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+  end
+
+  create_table "wishlists", force: :cascade do |t|
+    t.integer  "shopper_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

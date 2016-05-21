@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get 'login' => "login#index"
 
   post "/api/shoppers" => "shopper#create"
+  post "/api/wishlist" => "wishlist#create_or_update"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
