@@ -8,7 +8,6 @@ class ApplicationController < ActionController::Base
   end
 
   def shopify_api
-    puts "#{current_user.inspect}"
     @shopify_api_session = ShopifyAPI::Session.new(current_user.uid, current_user.token)
     ShopifyAPI::Base.activate_session(@shopify_api_session)
   end

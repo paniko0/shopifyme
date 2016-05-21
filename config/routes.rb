@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'logout/logout'
+
+  post 'discount', to: 'discount#discount'
+
   get 'products', to: 'products#list'
 
   get '/auth/:provider/callback', to: 'oauth#callback'

@@ -3,7 +3,8 @@
     <% @products.each do |product| %>
       <tr>
         <%= form_tag("/discount", method: "POST") do %>
-          <%= hidden_field_tag 'product_ir', product.id %>
+          <%= hidden_field_tag 'product_id', product.id %>
+          <%= hidden_field_tag 'product_amount', product.variants[0].price %>
           <td><%= product.title %></td>
           <td><%= product.variants[0].price %></td>
           <td><%= button_tag "10% OFF", data: { disable_with: "Processing" } %></td>
