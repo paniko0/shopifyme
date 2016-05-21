@@ -1,0 +1,5 @@
+<%= form_tag("/auth/shopify", method: "get") do %>
+  <%= label_tag(:shop, "Enter your store's URL:") %>
+  <%= text_field_tag(:shop, "paniko0.myshopify.com", placeholder: 'your-shop-url.myshopify.com') %>
+  <%= submit_tag("Log In") %>
+<% end %>
