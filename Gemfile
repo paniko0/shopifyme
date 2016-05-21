@@ -37,6 +37,7 @@ gem 'active_model_serializers'
 gem 'bcrypt'
 gem 'puma'
 gem 'pg'
+gem 'lograge'
 
 gem 'shopify_api'
 
