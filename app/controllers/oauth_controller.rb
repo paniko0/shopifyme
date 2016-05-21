@@ -1,9 +1,13 @@
 class OauthController < ApplicationController
 
   def callback
-    @user = ShopifyUser.create(token: auth_hash.credentials.token, uid: auth_hash.uid)
-    current_user = @user
+    user = ShopifyUser.where(uid: auth_hash.uid).first_or_initialize
+    user.update_attributes(token: auth_hash.credentials.token)
+
+    session[:user] = user.token
+    
     redirect_to "/products"
+
   end
 
   protected
