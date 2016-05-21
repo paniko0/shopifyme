@@ -4,6 +4,7 @@ class WishlistController < ActionController::API
   before_action :authenticate
 
   def index
+    render json: current_shopper.wishlist
   end
 
   def create_or_update
@@ -13,7 +14,7 @@ class WishlistController < ActionController::API
       current_shopper.wishlist.items << Item.new(i)
     end
     current_shopper.save
-    render nothing: true, status: 201
+    render json: current_shopper.wishlist, status: 201
   end
 
   private
