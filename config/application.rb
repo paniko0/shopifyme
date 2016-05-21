@@ -33,5 +33,7 @@ module Shopifyme
     config.active_record.raise_in_transactional_callbacks = true
 
     config.lograge.enabled = true
+
+    config.api_only = false
   end
 end
