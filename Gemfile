@@ -33,6 +33,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 gem 'omniauth-shopify-oauth2'
+gem 'active_model_serializers'
+gem 'bcrypt'
 
 gem 'shopify_api'
 
@@ -41,6 +43,7 @@ group :development, :test do
   gem 'byebug'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
+  gem 'shoulda-matchers', '~> 3.1'
 end
 
 group :development do

@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :shopper do
-    email "MyString"
-    password_hash "MyString"
+    email "user@domain.com"
+    password "some_password"
   end
 end
