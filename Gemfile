@@ -32,9 +32,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'rails-api'
 gem 'omniauth-shopify-oauth2'
 gem 'active_model_serializers'
 gem 'bcrypt'
+gem 'puma'
 
 gem 'shopify_api'
 
@@ -44,6 +46,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'shoulda-matchers', '~> 3.1'
+  gem 'foreman'
 end
 
 group :development do
