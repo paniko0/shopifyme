@@ -35,5 +35,7 @@ module Shopifyme
     config.lograge.enabled = true
 
     config.api_only = false
+
+    config.logger = Logger.new(STDOUT)
   end
 end
