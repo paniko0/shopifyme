@@ -32,6 +32,7 @@ Allow shoppers to create wishlists and connect Shopify stores that would like to
 ![login](https://raw.githubusercontent.com/paniko0/shopifyme/master/screenshots/M1%20-%20Login.png)
 
 2. Create a wishlist
+
 ![wishlist](https://raw.githubusercontent.com/paniko0/shopifyme/master/screenshots/M2%20-%20Wishlist.png)
 
 ![wishlist](https://raw.githubusercontent.com/paniko0/shopifyme/master/screenshots/M3%20-%20Add%20wish.png)
