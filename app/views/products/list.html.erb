@@ -1,33 +1,37 @@
-<table>
-  <div class="ui cards">
-    <% @products.each do |product| %>
-      <div class="card">
-        <%= form_tag("/discount", method: "POST") do %>
-          <%= hidden_field_tag 'product_id', product.id %>
-          <%= hidden_field_tag 'product_amount', product.price %>
-          <div class="image">
-            <img class="ui mini image" src="<%= product.img %>">
-          </div>
-          <div class="content">
-            &nbsp;
-          </div>
-          <div class="extra content">
-            <div class="ui centered aligned grey header">
-              <%= product.title %>
+<div class="ui four column doubling stackable grid container">
+  <h1 class="ui grey header" style="font-size: 6rem">Hello,</h1>
+  <h1 class="ui grey header">Your most desired products</h1>
+  <table>
+    <div class="ui cards">
+      <% @products.each do |product| %>
+        <div class="card">
+          <%= form_tag("/discount", method: "POST") do %>
+            <%= hidden_field_tag 'product_id', product.id %>
+            <%= hidden_field_tag 'product_amount', product.price %>
+            <div class="image">
+              <img class="ui mini image" src="<%= product.img %>">
             </div>
-            <div class="fluid ui left labeled button" tabindex="0">
-              <div class="fluid ui basic right label">
-                <i class="users icon"></i>
-                Customers interested
+            <div class="content">
+              &nbsp;
+            </div>
+            <div class="extra content">
+              <div class="ui centered aligned grey header">
+                <%= product.title %>
               </div>
-              <div class="ui teal button">
-                <%= product.interested %>
+              <div class="fluid ui left labeled button" tabindex="0">
+                <div class="fluid ui basic right label">
+                  <i class="users icon"></i>
+                  Customers interested
+                </div>
+                <div class="ui teal button">
+                  <%= product.interested %>
+                </div>
               </div>
             </div>
-          </div>
-          <%= button_tag "OFFER 10% OFF", class: "ui bottom attached green button", data: { disable_with: "Processing" } %>
-        <% end %>
-      </div>
-    <% end %>
-  </div>
-</table>
+            <%= button_tag "OFFER 10% OFF", class: "ui bottom attached green button", data: { disable_with: "Processing" } %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </table>
+</div>
