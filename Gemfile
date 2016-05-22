@@ -39,6 +39,7 @@ gem 'puma'
 gem 'pg'
 gem 'lograge'
 gem 'textacular'
+gem 'httparty'
 
 gem 'shopify_api'
 

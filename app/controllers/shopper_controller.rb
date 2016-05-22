@@ -11,6 +11,6 @@ class ShopperController < ActionController::API
 
   private
   def shopper_params
-    params.permit(:email, :password)
+    params.permit(:email, :password, :token)
   end
 end
