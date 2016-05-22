@@ -5,6 +5,7 @@ class Shopper < ActiveRecord::Base
   validates :password_hash, presence: true
 
   has_one :wishlist
+  has_many :offers
 
   def self.authenticate(email, password)
     s = self.where(email: email).first

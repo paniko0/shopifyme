@@ -5,6 +5,7 @@ RSpec.describe Shopper, type: :model do
   it { should validate_presence_of :password_hash }
 
   it { should have_one :wishlist }
+  it { should have_many :offers }
 
   it "sets password_hash when creating a Shopper with password" do
     shopper = described_class.create(attributes_for(:shopper))
