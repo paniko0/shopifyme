@@ -22,17 +22,24 @@ class DiscountController < ApplicationController
     items = Item.basic_search(name: title)
 
     items.each do |i|
-      Offer.create(shopper: i.wishlist.shopper, product: title, price: amount, store: current_user.uid)
+      o = Offer.create(shopper: i.wishlist.shopper, product: title, price: amount, store: current_user.uid)
+
+      if i.wishlist.shopper.token
+        send_push_notification(o, i.wishlist.shopper.token)
+      end
     end
   end
 
-  def send_push_notifications
+  def send_push_notification(offer, token)
     headers = { "Authorization" => "key=AIzaSyC1KMLqu1xL5njIqEpBNGyzlE4VLQAMIqA", "Content-Type" => "application/json" }
     body = {
-      registration_ids: [ "ids" ]
+      data: {
+        new_offer: "new"
+      },
+      to: token
     }
     resp = HTTParty.post "https://fcm.googleapis.com/fcm/send", headers: headers, body: body.to_json
-    logger.info "Request to fcm sent: resp=#{resp}"
+    logger.info "request to fcm sent: resp=#{resp}"
   rescue => e
     logger.info "Error has happened: #{e.message}"
   end
