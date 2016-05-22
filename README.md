@@ -27,11 +27,11 @@ Allow shoppers to create wishlists and connect Shopify stores that would like to
 
 #### Shopper
 
-1. Create a new account using email address and a password
+1.Create a new account using email address and a password
 
 ![login](https://raw.githubusercontent.com/paniko0/shopifyme/master/screenshots/M1%20-%20Login.png)
 
-2. Create a wishlist
+2.Create a wishlist
 
 ![wishlist](https://raw.githubusercontent.com/paniko0/shopifyme/master/screenshots/M2%20-%20Wishlist.png)
 
@@ -41,10 +41,10 @@ Allow shoppers to create wishlists and connect Shopify stores that would like to
 
 ![wishlist](https://raw.githubusercontent.com/paniko0/shopifyme/master/screenshots/M5%20-%20Wishlist.png)
 
-3. Wait for offers to show up
+3.Wait for offers to show up
 
 ![offer notification](https://raw.githubusercontent.com/paniko0/shopifyme/master/screenshots/M7%20-%20Offer%20Notification.png)
 
-4. Go to Shopify Store and buy your wish
+4.Go to Shopify Store and buy your wish
 
 ![offers](https://raw.githubusercontent.com/paniko0/shopifyme/master/screenshots/M8%20-%20Offers.png)
