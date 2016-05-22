@@ -8,9 +8,7 @@ class ProductsController < ApplicationController
 
   private
   def calculate_interest(name)
-    # Todo use postgres fuzzy search
-    #Item.basic_search(name: name).count
-    Item.where("lower(items.name) LIKE :l_name", l_name: "%#{name}%".downcase).count
+    Item.basic_search(name: name).size
   end
 end
 
