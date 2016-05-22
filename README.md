@@ -46,4 +46,5 @@ Allow shoppers to create wishlists and connect Shopify stores that would like to
 ![offer notification](https://raw.githubusercontent.com/paniko0/shopifyme/master/screenshots/M7%20-%20Offer%20Notification.png)
 
 4. Go to Shopify Store and buy your wish
+
 ![offers](https://raw.githubusercontent.com/paniko0/shopifyme/master/screenshots/M8%20-%20Offers.png)
