@@ -1,5 +1,5 @@
 class OfferSerializer < ActiveModel::Serializer
-  attributes :product, :price, :store
+  attributes :product, :price, :store, :wish
 
   def wish
     object.product
