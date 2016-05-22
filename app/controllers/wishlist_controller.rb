@@ -4,6 +4,8 @@ class WishlistController < ActionController::API
   before_action :authenticate
 
   def index
+    current_shopper.build_wishlist unless current_shopper.wishlist
+    current_shopper.save
     render json: current_shopper.wishlist
   end
 
