@@ -1,15 +1,23 @@
 <table>
-
+  <div class="ui link cards">
     <% @products.each do |product| %>
-      <tr>
+      <div class="card">
         <%= form_tag("/discount", method: "POST") do %>
           <%= hidden_field_tag 'product_id', product.id %>
           <%= hidden_field_tag 'product_amount', product.variants[0].price %>
-          <td><%= product.title %></td>
-          <td><%= product.variants[0].price %></td>
-          <td><%= button_tag "10% OFF", data: { disable_with: "Processing" } %></td>
+          <div class="image">
+            <img class="ui mini image" src="<%= product.images.first.src %>">
+          </div>
+          <div class="content">
+            <div class="header">
+              <%= product.variants[0].price %>
+            </div>
+          </div>
+          <div class="extra content">
+            <%= button_tag "OFFER 10% OFF", class: "ui teal button", data: { disable_with: "Processing" } %>
+          </div>
         <% end %>
-      </tr>
-
+      </div>
     <% end %>
+  </div>
 </table>
