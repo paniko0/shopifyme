@@ -10,10 +10,8 @@ class DiscountController < ApplicationController
     product.save!
 
     save_offer(product.title, "store", new_amount)
-    #send_push_notifications
 
     redirect_to "/products"
-
   end
 
   private
@@ -34,7 +32,7 @@ class DiscountController < ApplicationController
     headers = { "Authorization" => "key=AIzaSyC1KMLqu1xL5njIqEpBNGyzlE4VLQAMIqA", "Content-Type" => "application/json" }
     body = {
       data: {
-        new_offer: "new"
+        product: offer.product
       },
       to: token
     }
