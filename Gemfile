@@ -38,6 +38,7 @@ gem 'bcrypt'
 gem 'puma'
 gem 'pg'
 gem 'lograge'
+gem 'textacular'
 
 gem 'shopify_api'
 

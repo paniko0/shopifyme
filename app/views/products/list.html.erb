@@ -4,18 +4,20 @@
       <div class="card">
         <%= form_tag("/discount", method: "POST") do %>
           <%= hidden_field_tag 'product_id', product.id %>
-          <%= hidden_field_tag 'product_amount', product.variants[0].price %>
+          <%= hidden_field_tag 'product_amount', product.price %>
           <div class="image">
-            <img class="ui mini image" src="<%= product.images.first.src %>">
+            <img class="ui mini image" src="<%= product.img %>">
           </div>
           <div class="content">
             <div class="header">
-              <%= product.variants[0].price %>
+              <%= product.title %>
+            </div>
+            <div class="description">
+              Customers interested
+              <%= product.interested %>
             </div>
           </div>
-          <div class="extra content">
-            <%= button_tag "OFFER 10% OFF", class: "ui teal button", data: { disable_with: "Processing" } %>
-          </div>
+          <%= button_tag "OFFER 10% OFF", class: "ui bottom attached teal button", data: { disable_with: "Processing" } %>
         <% end %>
       </div>
     <% end %>
