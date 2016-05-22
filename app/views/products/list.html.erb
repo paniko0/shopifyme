@@ -1,5 +1,5 @@
 <table>
-  <div class="ui link cards">
+  <div class="ui cards">
     <% @products.each do |product| %>
       <div class="card">
         <%= form_tag("/discount", method: "POST") do %>
@@ -12,9 +12,13 @@
             <div class="header">
               <%= product.title %>
             </div>
-            <div class="description">
-              Customers interested
-              <%= product.interested %>
+            <div class="ui left labeled content" tabindex="0">
+              <div class="ui basic right pointing label">
+                Customers interested
+              </div>
+              <div class="ui label">
+                <%= product.interested %>
+              </div>
             </div>
           </div>
           <%= button_tag "OFFER 10% OFF", class: "ui bottom attached teal button", data: { disable_with: "Processing" } %>
