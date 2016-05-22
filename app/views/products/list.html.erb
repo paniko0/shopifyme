@@ -12,16 +12,17 @@
             <div class="header">
               <%= product.title %>
             </div>
-            <div class="ui left labeled content" tabindex="0">
-              <div class="ui basic right pointing label">
+            <div class="ui left labeled button" tabindex="0">
+              <div class="ui basic right label">
+                <i class="users icon"></i>
                 Customers interested
               </div>
-              <div class="ui label">
+              <div class="ui teal button">
                 <%= product.interested %>
               </div>
             </div>
           </div>
-          <%= button_tag "OFFER 10% OFF", class: "ui bottom attached teal button", data: { disable_with: "Processing" } %>
+          <%= button_tag "OFFER 10% OFF", class: "ui bottom attached green button", data: { disable_with: "Processing" } %>
         <% end %>
       </div>
     <% end %>
