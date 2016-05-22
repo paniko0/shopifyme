@@ -4,7 +4,7 @@ class OfferController < ActionController::API
   before_action :authenticate
 
   def index
-    render json: current_shopper.offers
+    render json: current_shopper.offers, root: "items", adapter: :json
   end
 
   private
